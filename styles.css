@@ -1,0 +1,25 @@
+.reserved_key1{
+   		color:rgb(5, 83, 143);
+	      }
+.reserved_key2{
+    		color:goldenrod;
+	      }
+.comment{
+    		color:rgb(43, 171, 11);
+        }
+.preprocess_dir{
+    		color:purple;
+	       }
+.header_file{
+    		color:red;
+	    }
+.string{
+    	 	color:magenta;
+       }
+.numeric_constant{
+    		 color:brown;
+	        }
+.ascii_char{
+    		 color:firebrick;
+	        }
+

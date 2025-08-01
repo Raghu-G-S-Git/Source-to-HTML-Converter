@@ -1,0 +1,77 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+HTML_CLOSE	s2html_conv.h	7;"	d
+HTML_OPEN	s2html_conv.h	6;"	d
+PEVENT_ASCII_CHAR	s2html_event.h	/^	PEVENT_ASCII_CHAR,$/;"	e	enum:__anon1
+PEVENT_DATA_SIZE	s2html_event.h	10;"	d
+PEVENT_EOF	s2html_event.h	/^	PEVENT_EOF$/;"	e	enum:__anon1
+PEVENT_HEADER_FILE	s2html_event.h	/^	PEVENT_HEADER_FILE,$/;"	e	enum:__anon1
+PEVENT_MULTI_LINE_COMMENT	s2html_event.h	/^	PEVENT_MULTI_LINE_COMMENT,$/;"	e	enum:__anon1
+PEVENT_NULL	s2html_event.h	/^	PEVENT_NULL,$/;"	e	enum:__anon1
+PEVENT_NUMERIC_CONSTANT	s2html_event.h	/^	PEVENT_NUMERIC_CONSTANT,$/;"	e	enum:__anon1
+PEVENT_PREPROCESSOR_DIRECTIVE	s2html_event.h	/^	PEVENT_PREPROCESSOR_DIRECTIVE,$/;"	e	enum:__anon1
+PEVENT_REGULAR_EXP	s2html_event.h	/^	PEVENT_REGULAR_EXP,$/;"	e	enum:__anon1
+PEVENT_RESERVE_KEYWORD	s2html_event.h	/^	PEVENT_RESERVE_KEYWORD,$/;"	e	enum:__anon1
+PEVENT_SINGLE_LINE_COMMENT	s2html_event.h	/^	PEVENT_SINGLE_LINE_COMMENT,$/;"	e	enum:__anon1
+PEVENT_STRING	s2html_event.h	/^	PEVENT_STRING,$/;"	e	enum:__anon1
+PSTATE_ASCII_CHAR	s2html_event.c	/^	PSTATE_ASCII_CHAR$/;"	e	enum:__anon3	file:
+PSTATE_HEADER_FILE	s2html_event.c	/^	PSTATE_HEADER_FILE,$/;"	e	enum:__anon3	file:
+PSTATE_IDLE	s2html_event.c	/^	PSTATE_IDLE,$/;"	e	enum:__anon3	file:
+PSTATE_MULTI_LINE_COMMENT	s2html_event.c	/^	PSTATE_MULTI_LINE_COMMENT,$/;"	e	enum:__anon3	file:
+PSTATE_NUMERIC_CONSTANT	s2html_event.c	/^	PSTATE_NUMERIC_CONSTANT,$/;"	e	enum:__anon3	file:
+PSTATE_PREPROCESSOR_DIRECTIVE	s2html_event.c	/^	PSTATE_PREPROCESSOR_DIRECTIVE,$/;"	e	enum:__anon3	file:
+PSTATE_RESERVE_KEYWORD	s2html_event.c	/^	PSTATE_RESERVE_KEYWORD,$/;"	e	enum:__anon3	file:
+PSTATE_SINGLE_LINE_COMMENT	s2html_event.c	/^	PSTATE_SINGLE_LINE_COMMENT,$/;"	e	enum:__anon3	file:
+PSTATE_STRING	s2html_event.c	/^	PSTATE_STRING,$/;"	e	enum:__anon3	file:
+PSTATE_SUB_PREPROCESSOR_ASCII_CHAR	s2html_event.c	/^	PSTATE_SUB_PREPROCESSOR_ASCII_CHAR,$/;"	e	enum:__anon3	file:
+PSTATE_SUB_PREPROCESSOR_MAIN	s2html_event.c	/^	PSTATE_SUB_PREPROCESSOR_MAIN,$/;"	e	enum:__anon3	file:
+PSTATE_SUB_PREPROCESSOR_RESERVE_KEYWORD	s2html_event.c	/^	PSTATE_SUB_PREPROCESSOR_RESERVE_KEYWORD,$/;"	e	enum:__anon3	file:
+RES_KEYWORD_DATA	s2html_event.h	7;"	d
+RES_KEYWORD_NON_DATA	s2html_event.h	8;"	d
+S2HTML_CONV_H	s2html_conv.h	2;"	d
+S2HTML_EVENT_H	s2html_event.h	2;"	d
+SIZE_OF_OPERATORS	s2html_event.c	7;"	d	file:
+SIZE_OF_SYMBOLS	s2html_event.c	6;"	d	file:
+STD_HEADER_FILE	s2html_event.h	6;"	d
+USER_HEADER_FILE	s2html_event.h	5;"	d
+WORD_BUFF_SIZE	s2html_event.c	8;"	d	file:
+data	s2html_event.h	/^	char data[PEVENT_DATA_SIZE]; \/\/ cwparsed string$/;"	m	struct:__anon2
+event_data_idx	s2html_event.c	/^static int event_data_idx=0;$/;"	v	file:
+get_parser_event	s2html_event.c	/^pevent_t *get_parser_event(FILE *fd)$/;"	f
+html_begin	s2html_conv.c	/^void html_begin(FILE* dest_fp, int type) \/* type => not used, but can be used to add differnet HTML tags *\/$/;"	f
+html_end	s2html_conv.c	/^void html_end(FILE* dest_fp, int type) \/* type => not used, but can be used to add differnet HTML tags *\/$/;"	f
+is_operator	s2html_event.c	/^static int is_operator(char c)$/;"	f	file:
+is_reserved_keyword	s2html_event.c	/^static int is_reserved_keyword(char *word)$/;"	f	file:
+is_symbol	s2html_event.c	/^static int is_symbol(char c)$/;"	f	file:
+length	s2html_event.h	/^	int length; \/\/ data length$/;"	m	struct:__anon2
+main	s2html_main.c	/^int main (int argc, char *argv[])$/;"	f
+operators	s2html_event.c	/^static char operators[] = {'\/', '+', '*', '-', '%', '=', '<', '>', '~', '&', ',', '!', '^', '|'};$/;"	v	file:
+pevent_data	s2html_event.c	/^static pevent_t pevent_data;$/;"	v	file:
+pevent_e	s2html_event.h	/^}pevent_e;$/;"	t	typeref:enum:__anon1
+pevent_t	s2html_event.h	/^}pevent_t;$/;"	t	typeref:struct:__anon2
+property	s2html_event.h	/^	int property; \/\/ property associated with data$/;"	m	struct:__anon2
+pstate_ascii_char_handler	s2html_event.c	/^pevent_t * pstate_ascii_char_handler(FILE *fd, int ch)$/;"	f
+pstate_e	s2html_event.c	/^}pstate_e;$/;"	t	typeref:enum:__anon3	file:
+pstate_header_file_handler	s2html_event.c	/^pevent_t * pstate_header_file_handler(FILE *fd, int ch)$/;"	f
+pstate_idle_handler	s2html_event.c	/^pevent_t * pstate_idle_handler(FILE *fd, int ch)$/;"	f
+pstate_multi_line_comment_handler	s2html_event.c	/^pevent_t * pstate_multi_line_comment_handler(FILE *fd, int ch)$/;"	f
+pstate_numeric_constant_handler	s2html_event.c	/^pevent_t * pstate_numeric_constant_handler(FILE *fd, int ch)$/;"	f
+pstate_preprocessor_directive_handler	s2html_event.c	/^pevent_t * pstate_preprocessor_directive_handler(FILE *fd, int ch)$/;"	f
+pstate_reserve_keyword_handler	s2html_event.c	/^pevent_t * pstate_reserve_keyword_handler(FILE *fd, int ch)$/;"	f
+pstate_single_line_comment_handler	s2html_event.c	/^pevent_t * pstate_single_line_comment_handler(FILE *fd, int ch)$/;"	f
+pstate_string_handler	s2html_event.c	/^pevent_t * pstate_string_handler(FILE *fd, int ch)$/;"	f
+pstate_sub_preprocessor_main_handler	s2html_event.c	/^pevent_t * pstate_sub_preprocessor_main_handler(FILE *fd, int ch)$/;"	f
+res_kwords_data	s2html_event.c	/^static char* res_kwords_data[] = {"const", "volatile", "extern", "auto", "register",$/;"	v	file:
+res_kwords_non_data	s2html_event.c	/^static char* res_kwords_non_data[] = {"goto", "return", "continue", "break", $/;"	v	file:
+set_parser_event	s2html_event.c	/^static void set_parser_event(pstate_e s, pevent_e e)$/;"	f	file:
+source_to_html	s2html_conv.c	/^void source_to_html(FILE* fp, pevent_t *event)$/;"	f
+state	s2html_event.c	/^static pstate_e state = PSTATE_IDLE;$/;"	v	file:
+state_sub	s2html_event.c	/^static pstate_e state_sub = PSTATE_SUB_PREPROCESSOR_MAIN;$/;"	v	file:
+symbols	s2html_event.c	/^static char symbols[] = {'(', ')', '{', '[', ':'};$/;"	v	file:
+type	s2html_event.h	/^	pevent_e type; \/\/ event type$/;"	m	struct:__anon2
+word	s2html_event.c	/^static char word[WORD_BUFF_SIZE];$/;"	v	file:
+word_idx	s2html_event.c	/^static int word_idx=0;$/;"	v	file:

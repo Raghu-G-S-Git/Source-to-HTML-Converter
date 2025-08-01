@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>sode2html</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color:rgb(104, 91, 91);">
+<pre>
+
+ <.>
+ _.
+ _.
+
+<span class="comment">/* start_or_end_conv function definitation */</span>
+ _(FILE* _,  ) <span class="comment">/* type => not used, but can be used to add differnet HTML tags */</span>
+{
+	<span class="comment">/* Add HTML begining tags into destination file */</span>
+	(_, <!DOCTYPE >\);
+	(_, < =\-US\>\);
+	(_, <>\);
+	(_, <>%</t>\, );
+	(_, < =\UTF-\>\);
+	(_, < =\\ =\.\>\);
+	(_, </h>\);
+	(_, < =\-:;\>\);
+	(_, <>\);
+}
+ _(FILE* _,  ) <span class="comment">/* type => not used, but can be used to add differnet HTML tags */</span>
+{
+	<span class="comment">/* Add HTML closing tags into destination file */</span>
+	(_, </p>\);
+	(_, </b>\);
+	(_, </h>\);
+}
+
+
+<span class="comment">/* sourc_to_html function definitation */</span>
+ __(FILE* , _ *)
+{
+ DEBUG
+	(%, ->);
+
+	(->)
+	{
+		 PEVENT_PREPROCESSOR_DIRECTIVE:
+			(,< =\_\>%</s>,->);
+			;
+		 PEVENT_MULTI_LINE_COMMENT:
+		 PEVENT_SINGLE_LINE_COMMENT:
+			(,< =\\>%</s>,->);
+			;
+		 PEVENT_STRING:
+			(,< =\\>%</s>,->);
+			;
+		 PEVENT_HEADER_FILE:
+			<span class="comment">/* write to html */</span>
+			(-> == USER_HEADER_FILE)
+				(,< =\_\>%</s>,->);
+			
+				(,< =\_\>&;%&;</s>,->);
+			;
+		 PEVENT_REGULAR_EXP:
+		 PEVENT_EOF :
+			(,%,->);
+			;
+		 PEVENT_NUMERIC_CONSTANT:
+			(,< =\_\>%</s>,->);
+			;
+		 PEVENT_RESERVE_KEYWORD:
+			(-> == RES_KEYWORD_DATA)
+			{
+				(,< =\_\>%</s>,->);
+			}
+			
+			{
+				(,< =\_\>%</s>,->);
+			}
+			;
+		 PEVENT_ASCII_CHAR:
+			(,< =\_\>%</s>,->);
+			;
+		 :
+			(U \);
+			;
+	}
+}
+
+</pre>
+</body>
+</html>

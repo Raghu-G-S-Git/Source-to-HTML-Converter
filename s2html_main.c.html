@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>sode2html</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color:rgb(169, 222, 255);">
+<pre>
+<span class="comment">/*
+	Name	 : Raghu G S
+
+	Project	 : Source to HTML
+	
+	Objective: The objective of the Source-to-HTML Converter project is to develop a C-based tool that reads 
+		a source code file (typically written in C or similar languages) and converts it into a well-formatted, 
+		syntax-highlighted HTML file for easy viewing in a web browser. This is especially useful for documentation, 
+		code reviews, presentations, or educational content, where code readability and structure are crucial. 
+		The project aims to enhance the visual representation of code by preserving indentation, highlighting keywords, 
+		and ensuring that special characters are rendered properly in HTML. By doing so, it bridges the gap between 
+		raw source code and web-friendly documentation.
+*/</span>
+
+
+<span class="preprocess_dir">#include</span><span class="preprocess_dir"> </span><span class="header_file">&lt;stdio.h&gt;</span>
+<span class="preprocess_dir">#include</span><span class="preprocess_dir"> </span><span class="header_file">"s2html_event.h"</span>
+<span class="preprocess_dir">#include</span><span class="preprocess_dir"> </span><span class="header_file">"s2html_conv.h"</span>
+
+<span class="comment">/********** main **********/</span>
+
+<span class="reserved_key1">int</span> main (<span class="reserved_key1">int</span> argc, <span class="reserved_key1">char</span> *argv[])
+{
+	FILE * sfp, *dfp; <span class="comment">// source and destination file descriptors 
+</span>	pevent_t *event;
+	<span class="reserved_key1">char</span> dest_file[<span class="numeric_constant">100</span>];
+
+	<span class="reserved_key2">if</span>(argc < <span class="numeric_constant">2</span>)
+	{
+		printf(<span class="string">"\nError ! please enter file name and mode\n"</span>);
+		printf(<span class="string">"Usage: <executable> <file name> \n"</span>);
+		printf(<span class="string">"Example : ./a.out abc.txt\n\n"</span>);
+		<span class="reserved_key2">return</span> <span class="numeric_constant">1</span>;
+	}
+<span class="preprocess_dir">#ifdef</span><span class="preprocess_dir"> </span>DEBUG
+	printf(<span class="string">"File to be opened : %s\n"</span>, argv[<span class="numeric_constant">1</span>]);
+<span class="preprocess_dir">#endif
+</span>
+	<span class="comment">/* opnen the file */</span>
+
+	<span class="reserved_key2">if</span>(NULL == (sfp = fopen(argv[<span class="numeric_constant">1</span>], <span class="string">"r"</span>)))
+	{
+		printf(<span class="string">"Error! File %s could not be opened\n"</span>, argv[<span class="numeric_constant">1</span>]);
+		<span class="reserved_key2">return</span> <span class="numeric_constant">2</span>;
+	}
+	<span class="comment">/* Check for output file */</span>
+	<span class="reserved_key2">if</span> (argc > <span class="numeric_constant">2</span>)
+	{
+		sprintf(dest_file, <span class="string">"%s.html"</span>, argv[<span class="numeric_constant">2</span>]);
+	}
+	<span class="reserved_key2">else</span>
+	{
+		sprintf(dest_file, <span class="string">"%s.html"</span>, argv[<span class="numeric_constant">1</span>]);
+	}
+	<span class="comment">/* open dest file */</span>
+	<span class="reserved_key2">if</span> (NULL == (dfp = fopen(dest_file, <span class="string">"w"</span>)))
+	{
+		printf(<span class="string">"Error! could not create %s output file\n"</span>, dest_file);
+		<span class="reserved_key2">return</span> <span class="numeric_constant">3</span>;
+	}
+
+	<span class="comment">/* write HTML starting Tags */</span>
+	html_begin(dfp, HTML_OPEN);
+
+	<span class="comment">/* Read from src file convert into html and write to dest file */</span>
+
+	<span class="reserved_key2">do</span>
+	{
+		event = get_parser_event(sfp);
+		<span class="comment">/* call sourc_to_html */</span>
+		source_to_html(dfp, event);
+<span class="comment">//		printf("In main : Event = %d\n", event);
+</span>	} <span class="reserved_key2">while</span> (event->type != PEVENT_EOF);
+
+	<span class="comment">/* Call start_or_end_conv function for ending the convertation */</span>
+	html_end(dfp, HTML_CLOSE);
+	
+	printf(<span class="string">"\nOutput file %s generated\n"</span>, dest_file);
+<span class="comment">/* close file */</span>
+	fclose(sfp);
+	fclose(dfp);
+
+	<span class="reserved_key2">return</span> <span class="numeric_constant">0</span>;
+}
+</pre>
+</body>
+</html>
